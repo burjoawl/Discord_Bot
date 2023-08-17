@@ -120,11 +120,12 @@ async def on_message(message):
                                 inline=False)
             embedvar2.set_footer(text="Kita akan bisa lebih dekat dengan saling memanggil nama")
 
+            await message.channel.send("https://cdn.discordapp.com/attachments/733644155804188712/1138833355769659482/discord_intro_banner.jpg")
             await message.channel.send(embed=embedvar2)
             await message.delete(delay=1)
 
         elif message.content.startswith('update_intro'):
-            embedvar2_1 = discord.Embed(title="Introduction",
+            embedvar2_1 = discord.Embed(title="Introduction2",
                                      description="Untuk dapat memasuki <#477911432709799936>, kamu harus isi intro di <#477900367112437762>",
                                      color=0x9b59b6,
                                      )
@@ -177,13 +178,94 @@ async def on_message(message):
             embedvar2_1.set_footer(text="Kita akan bisa lebih dekat dengan saling memanggil nama")
 
             channel = client.get_channel(1138311332333105292)
-            msg = await channel.fetch_message(1138551508733018255)
+            msg = await channel.fetch_message(1138857798554366084)
             await msg.edit(embed=embedvar2_1)
+            await message.delete(delay=1)
+
+        # about
+        if message.content.startswith('link'):
+            embedvar3 = discord.Embed(title="Ikuti semuanya ya~",
+                                      color=0xE74C3C,
+                                     description=
+                                    
+                                    "Facebook Fanpage: \nhttps://www.facebook.com/rinjucomic/\n"
+                                    "\n"
+                                    "Instagram: \nhttps://www.instagram.com/rinjuliana\n"
+                                    "\n"
+                                    "X (Twitter): \nhttps://x.com/@rinjucomic\n"
+                                    "\n"
+                                    "Youtube Channel: \nhttps://www.youtube.com/c/rinjuchannel\n"
+                                    "\n"
+                                    "Trakteer: \nhttps://trakteer.id/rinju\n"
+                                    "\n"
+                                    "Discord Link Invite: \nhttps://discord.gg/rinju | https://discord.gg/WaNanYf\n"
+                                    "\n"
+                                    "Pixiv: \nhttps://www.pixiv.net/en/users/21807831/illustrations" 
+                                     )
+            embedvar3.set_thumbnail(url="https://scontent.fcgk18-1.fna.fbcdn.net/v/t39.30808-6/328951518_1245462736351869_1261450744254198511_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=be3454&_nc_eui2=AeGmGndYRT5fGEfNqahVa-L7Ks1SXvYA-GIqzVJe9gD4Yq88lmJa88L7S_Nl4nR4y-__LAnT5Uj3poBPx07Rss9d&_nc_ohc=GjKn5QD1jsUAX-5aE9_&_nc_ht=scontent.fcgk18-1.fna&oh=00_AfAWZUQvHPh879xLo7mg0rE2edmVXCIUTFa-O9ny-nEpUA&oe=64DB63AA")
+            await message.channel.send("https://cdn.discordapp.com/attachments/733644155804188712/1139536166970990602/discord_link_banner.jpg")
+            await message.channel.send(embed=embedvar3)
+            await message.delete(delay=2)
+
+        elif message.content.startswith('update_link'):
+            embedvar3_1 = discord.Embed(title="Introduction2",
+                                     description="Untuk dapat memasuki <#477911432709799936>, kamu harus isi intro di <#477900367112437762>",
+                                     color=0x9b59b6,
+                                     )
+            embedvar3_1.add_field(name="\u200b", value="")
+            embedvar3_1.add_field(name="FORMAT INTRODUCTION (langsung copas)", 
+                                value=
+                                "\- \*Nama Asli:\n"
+                                "\- Gender:\n"
+                                "\- Umur:\n"
+                                "\- Asal:\n"
+                                "\- Tau server ini darimana:\n"
+                                "\- Sebut satu nama temanmu yg sudah join server ini:\n" 
+                                "\- \**Data lain: \n"
+                                "\n"
+                                "**\*WAJIB DIISI!.**\n"
+                                "*Jika anda seorang Vtuber, bisa sekalian mencantumkan bukti yang sesuai.\n"
+                                "**(Optional) Bisa diisi data lain seperti akun steam, game yg sedang dimainin, dll.\n",
+                                inline=False)
+            embedvar3_1.add_field(name="", value="\u200b")
+            embedvar3_1.add_field(name="PENJELASAN", 
+                                value=
+                                "- Nama yg kamu cantumkan di <#477900367112437762> akan menentukan boleh tidaknya kamu untuk mendapatkan full akses di server discord ini.\n"
+                                "- Nama itu akan digunakan sebagai nickname discord.\n"
+                                "- Minimal cantumkan nama depan saja. Nama tengah/belakang optional.\n",
+                                inline=False)
+            embedvar3_1.add_field(name="", value="\u200b")
+            embedvar3_1.add_field(name="Contoh", 
+                                value=
+                                "\- \*Nama Asli: Asep\n"
+                                "\- Gender: Laki\n"
+                                "\- Umur: 69\n"
+                                "\- Asal: Nganjuk\n"
+                                "\- Tau server ini darimana: fesbuk\n"
+                                "\- Sebut satu nama temanmu yg sudah join server ini: <@173724932398645249>\n" 
+                                "\- \**Data lain: \n"
+                                "\- steam:  https://steamcommunity.com/id/burjoawl/ \n",
+                                inline=False)
+            embedvar3_1.add_field(name="", value="\u200b")
+            embedvar3_1.add_field(name="SELANJUTNYA",
+                                value=
+                                "- Setelah mengisi<#477900367112437762> , tunggu sampai admin mereview intro kamu."
+                                " Kalau kamu mengisi <#477900367112437762> dengan benar, kamu akan mendapatkan role untuk mendapatkan full akses."
+                                " Tapi bila intro kamu diberi react <:no:492702953581576192>, admin menolak memberikan role dan harus mengisi intro lagi yg benar.\n"
+                                "- Kalau kalian benar-benar yakin nama itu adalah nama kamu dan masih diberi react <:no:492702953581576192>."
+                                "Kalian bisa komplen dengan DM <@380684183204528128> atau <@&572034275164160010>. Untuk fast respon DM ktp/tanda pengenal kamu."
+                                " Tunjukan nama saja, sensor data lain.\n"
+                                "- Bila ada member yg namanya sama (double name). Nama tengah/belakang/username discord akan digunakan sebagai nama belakang di server ini.\n"
+                                "- Kamu bisa request ganti nama belakang discord bila merasa tidak nyaman dengan nama lengkap yg dijadikan nickname di server ini.\n", 
+                                inline=False)
+            embedvar3_1.set_footer(text="Kita akan bisa lebih dekat dengan saling memanggil nama")
+
+            channel = client.get_channel(1138311332333105292)
+            msg = await channel.fetch_message(1138857798554366084)
+            await msg.edit(embed=embedvar3_1)
             await message.delete(delay=1)
     else:
         return
 
-with open('./token.txt', 'r') as token_file:
-    token = token_file.read().strip()
 
-client.run(token)
+client.run('token')
